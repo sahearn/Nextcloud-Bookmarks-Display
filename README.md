@@ -1,2 +1,2 @@
 # Nextcloud-Bookmarks
-Render with collapsible display of bookmarks exported from Nextcloud
+Searchable and collapsible display of browser bookmarks exported from Nextcloud
