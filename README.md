@@ -18,13 +18,11 @@ The core work is done in PHP. This script generates the hierarchy of bookmarks i
   - as far as I can tell, beyond an HTML export there isn't a good way to simply pull down "everything" - folders and bookmarks together, in some parseable structure. Hence the need to query folders and bookmarks separately
   - each folder in the folders file has an id, and each bookmark in the bookmarks file has an id - but those ids are **not** unique when combined. This caused problems when trying to generate the parent/child hierarchy, so there's logic to accommodate that
   - hierarchy generation is typical recursive stuff, but with some subtleties to account for generating valid UL/LI markup
-
-The tree structure and searching are done via [hakoiko's](https://github.com/hakoiko) [jQuery Tree Filter](https://github.com/hakoiko/jquery-tree-filter).
-
-The PHP script will generate a finished HTML file which can then be used as an include (for me, into a page in my wiki). References/includes to CSS and JS files are self-contained, but verify paths as necessary.
+- the tree structure and searching are done via [hakoiko's](https://github.com/hakoiko) [jQuery Tree Filter](https://github.com/hakoiko/jquery-tree-filter).
+- the PHP script will generate a finished HTML file which can then be used as an include (for me, into a page in my wiki). References/includes to CSS and JS files are self-contained, but verify paths as necessary.
 
 ## Usage
-Run the cron:
+Create a shell script to run via cron:
 ```
 #!/bin/sh
 cd /path/to/working/dir
@@ -32,3 +30,5 @@ curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud
 curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud]/index.php/apps/bookmarks/public/rest/v2/bookmark?limit=1000 --output thegood.bks.json
 php bookmarks.php > bookmarks.inc
 ```
+
+Include `bookmarks.inc` into your site.
