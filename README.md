@@ -1,4 +1,4 @@
-# Nextcloud-Bookmarks-Display
+# Nextcloud Bookmarks Display
 Searchable and collapsible display of browser bookmarks exported from Nextcloud
 
 ## Background
