@@ -7,10 +7,10 @@
 <?
 date_default_timezone_set('America/New_York');
 
-$bkFile = '/path/to/thegood.bks.json';
+$bkFile = '/path/to/bks.json';
 $bks = file_get_contents($bkFile);
 
-$folderFile = '/path/to/thegood.bkfolders.json';
+$folderFile = '/path/to/bkfolders.json';
 $folders = file_get_contents($folderFile);
 
 // read in folders json (with hierarchy), output flat array
