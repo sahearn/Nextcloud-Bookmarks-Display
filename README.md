@@ -26,8 +26,8 @@ Create a shell script to run via cron:
 ```
 #!/bin/sh
 cd /path/to/working/dir
-curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud]/index.php/apps/bookmarks/public/rest/v2/folder --output thegood.bkfolders.json
-curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud]/index.php/apps/bookmarks/public/rest/v2/bookmark?limit=1000 --output thegood.bks.json
+curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud]/index.php/apps/bookmarks/public/rest/v2/folder --output bkfolders.json
+curl -s -u '[credentials]' -H "Accept: application/json" https://[your.nextcloud]/index.php/apps/bookmarks/public/rest/v2/bookmark?limit=1000 --output bks.json
 php bookmarks.php > bookmarks.inc
 ```
 
