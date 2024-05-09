@@ -32,3 +32,8 @@ php bookmarks.php > bookmarks.inc
 ```
 
 Include `bookmarks.inc` into your site.
+
+## Screenshots
+![collapsible tree view](screenshots/bk-tree.png "tree view")
+
+![search view](screenshots/bk-search.png "search view")
